@@ -1,0 +1,107 @@
+{
+ "autoname": "field:task_title",
+ "creation": "2021-11-09 15:37:54.113427",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "task_title",
+  "project_id",
+  "column_break_3",
+  "start_date",
+  "end_date",
+  "status"
+ ],
+ "fields": [
+  {
+   "fieldname": "task_title",
+   "fieldtype": "Data",
+   "label": "Task title",
+   "unique": 1
+  },
+  {
+   "fetch_from": "project.project_id",
+   "fieldname": "project_id",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Project ID",
+   "options": "Project"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date"
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End Date"
+  },
+  {
+   "default": "New",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status ",
+   "options": "WIP\nUnder QA\nCompleted\nNew"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "modified": "2021-11-23 17:36:41.408029",
+ "modified_by": "Administrator",
+ "module": "Project Management",
+ "name": "Project Task",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Developer",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "QA",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
